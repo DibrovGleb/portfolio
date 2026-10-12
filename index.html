@@ -5,18 +5,24 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>portfolio</title>
+  <!-- 1. Сообщает браузеру, что сайт поддерживает темный холст -->
+  <meta name="color-scheme" content="dark light" />
+  <title>Portfolio</title>
+
+  <!-- 2. Мгновенно красит root-элемент в нужный цвет без задержки -->
   <script>
     (function () {
       try {
         var saved = localStorage.getItem('portfolio_theme');
         var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
         document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.style.backgroundColor = theme === 'light' ? '#f8fafc' : '#111111';
+        document.documentElement.style.color = theme === 'light' ? '#0f172a' : '#ffffff';
       } catch (e) { }
     })();
   </script>
-  <script type="module" crossorigin src="/portfolio/assets/index-h31ePm0y.js"></script>
-  <link rel="stylesheet" crossorigin href="/portfolio/assets/index-C9jZNAmJ.css">
+  <script type="module" crossorigin src="/portfolio/assets/index-B8DWd05p.js"></script>
+  <link rel="stylesheet" crossorigin href="/portfolio/assets/index-DO9LLFNr.css">
 </head>
 
 <body>
